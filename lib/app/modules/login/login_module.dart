@@ -1,4 +1,5 @@
-import 'package:app_task/app/modules/login/presenter/pages/login_page.dart';
+import 'package:app_task/app/modules/login/presenter/pages/login/login_page.dart';
+import 'package:app_task/app/modules/user/user_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class LoginModule extends Module {
@@ -8,5 +9,6 @@ class LoginModule extends Module {
   @override
   List<ModularRoute> get routes => [
     ChildRoute('/', child: (context, args) => const LoginPage()),
+    ModuleRoute('/', module: UserModule()),
   ];
 }

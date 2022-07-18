@@ -2,7 +2,6 @@ import 'package:app_task/app/modules/login/presenter/widgets/footer/footer_widge
 import 'package:app_task/app/modules/login/presenter/widgets/form/form_widget.dart';
 import 'package:app_task/app/modules/todo-list/presenter/widgets/header_todo_list_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

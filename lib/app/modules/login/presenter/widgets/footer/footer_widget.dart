@@ -30,14 +30,18 @@ class FooterWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide.none,
               ),
-              onPressed: () {},
+              onPressed: () {
+
+              },
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('Não tem conta?'),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/register');
+                  },
                   child: const Text('Cadastre-se'),
                 )
               ],

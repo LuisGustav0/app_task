@@ -24,19 +24,17 @@ class FormWidget extends StatelessWidget {
               type: TypeInputText.PASSWORD,
             ),
             const SizedBox(height: 20),
+            const InputTextField(
+              label: 'Confirmar senha',
+              type: TypeInputText.PASSWORD,
+            ),
+            const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
-                  onPressed: () {},
-                  child: const Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Esqueceu sua senha?'),
-                  ),
-                ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text('Login'),
+                  child: const Text('Salvar'),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),

@@ -1,1 +1,0 @@
-enum TypeInputText { TEXT, PASSWORD }

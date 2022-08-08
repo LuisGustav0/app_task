@@ -37,6 +37,9 @@ dependencies:
   # Isar
   isar: ^2.5.0
   isar_flutter_libs: ^2.5.0
+  # firebase
+  firebase_core: ^1.20.0
+  firebase_auth: ^3.6.2
   # Others
   path_provider: ^2.0.11
   dartz: ^0.10.1

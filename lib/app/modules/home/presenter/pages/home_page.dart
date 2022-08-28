@@ -20,10 +20,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Page')),
       body: Column(
-        children: const [
+        children: [
           UserCardWidget(),
-          NavBarWidget(),
-          TodoListWidget(),
+          const NavBarWidget(),
+          const TodoListWidget(),
         ],
       ),
       floatingActionButton: buildFloatingActionButton(),

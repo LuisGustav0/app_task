@@ -8,7 +8,7 @@ class TodoModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-    ChildRoute('/list', child: (context, args) => const TodoListPage()),
-    ChildRoute('/', child: (context, args) => const CreateTodoPage()),
+    ChildRoute('/', child: (context, args) => const TodoListPage()),
+    ChildRoute('/create', child: (context, args) => const CreateTodoPage()),
   ];
 }

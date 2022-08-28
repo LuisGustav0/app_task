@@ -1,4 +1,5 @@
 import 'package:app_task/app/modules/home/presenter/pages/home_page.dart';
+import 'package:app_task/app/modules/login/presenter/pages/login_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class HomeModule extends Module {

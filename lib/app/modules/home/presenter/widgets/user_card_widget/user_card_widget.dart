@@ -1,12 +1,20 @@
 import 'package:app_task/app/core/config/themes/app_theme.dart';
 import 'package:app_task/app/core/presenter/components/avatar/avatar_component.dart';
+import 'package:app_task/app/core/user/user_auth.dart';
+import 'package:app_task/app/modules/login/presenter/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class UserCardWidget extends StatelessWidget {
-  const UserCardWidget({super.key});
+  UserCardWidget({super.key});
+
+  final _controller = Modular.get<LoginController>();
 
   @override
   Widget build(BuildContext context) {
+    final String picture =
+        UserAuth.instance.picture ?? 'https://placehold.co/80';
+
     return Container(
       alignment: Alignment.center,
       width: double.infinity,
@@ -24,13 +32,13 @@ class UserCardWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const AvatarComponent(
+          AvatarComponent(
             width: 80,
-            path: 'https://placehold.co/80',
+            path: picture,
           ),
           const SizedBox(height: 20),
           Text(
-            'André Baltieri',
+            UserAuth.instance.name,
             style: TextStyle(
               color: AppTheme.white,
             ),
@@ -42,7 +50,9 @@ class UserCardWidget extends StatelessWidget {
                 color: AppTheme.white,
               ),
             ),
-            onPressed: () {},
+            onPressed: () async {
+              await _controller.logout();
+            },
           ),
           const SizedBox(height: 40),
         ],
